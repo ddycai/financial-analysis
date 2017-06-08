@@ -1,0 +1,21 @@
+syntax = "proto2";
+package frigidrain;
+
+option java_package = "io.github.frigidrain";
+
+message PortfolioDistribution {
+  message StockProportion {
+    optional string ticker = 1;
+    optional double percentage = 2;
+  }
+  repeated StockProportion stock = 1;
+}
+
+message Portfolio {
+  message StockQuantity {
+    optional string ticker = 1;
+    optional int32 quantity = 2;
+    optional double price = 3;
+  }
+  repeated StockQuantity stock = 1;
+}
