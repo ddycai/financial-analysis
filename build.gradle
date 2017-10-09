@@ -12,7 +12,14 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'idea'
-apply plugin: "com.google.protobuf"
+apply plugin: 'com.google.protobuf'
+apply plugin: 'application'
+
+mainClassName = 'io.github.frigidrain.InvestmentProportions'
+
+run {
+  standardInput = System.in
+}
 
 sourceCompatibility = 1.8
 
